@@ -3,23 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Discord Webhook</title>
+    <title>IP Authorization</title>
 </head>
 <body>
+    <h1 id="status">Checking Authorization...</h1>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            const webhookUrl = 'https://discord.com/api/webhooks/1265377304951918686/apyimT-aKn65WmNElEntq8EDT9tOg7Wx4F91x6vWba1WD3cvzq4KU2-PDhY5j-92jZqT';
-            const message = {
-                content: "Hello!"
-            };
+            const webhookUrl = '';
+            const authorizedIPs = ['104.28.62.10']; // Replace with actual IPs
 
-            fetch(webhookUrl, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(message)
-            });
+            fetch('https://api.ipify.org?format=json')
+                .then(response => response.json())
+                .then(data => {
+                    const userIP = data.ip;
+                    if (authorizedIPs.includes(userIP)) {
+                        document.getElementById('status').innerText = 'Authorized';
+                        const message = {
+                            content: "Mňau!"
+                        };
+                        fetch(webhookUrl, {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify(message)
+                        });
+                    } else {
+                        document.getElementById('status').innerText = 'Unauthorized';
+                    }
+                })
+                .catch(error => {
+                    document.getElementById('status').innerText = 'Error checking IP';
+                });
         });
     </script>
 </body>

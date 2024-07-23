@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Webhook</title>
+</head>
+<body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const webhookUrl = 'https://discord.com/api/webhooks/1265377304951918686/apyimT-aKn65WmNElEntq8EDT9tOg7Wx4F91x6vWba1WD3cvzq4KU2-PDhY5j-92jZqT';
+            const message = {
+                content: "Hello!"
+            };
+
+            fetch(webhookUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(message)
+            });
+        });
+    </script>
+</body>
+</html>

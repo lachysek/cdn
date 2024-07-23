@@ -8,34 +8,7 @@
 <body>
     <h1 id="status">Checking Authorization...</h1>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const webhookUrl = 'https://discord.com/api/webhooks/1265377304951918686/apyimT-aKn65WmNElEntq8EDT9tOg7Wx4F91x6vWba1WD3cvzq4KU2-PDhY5j-92jZqT';
-            const authorizedIPs = ['104.28.62.10']; // Replace with actual IPs
-
-            fetch('https://api.ipify.org?format=json')
-                .then(response => response.json())
-                .then(data => {
-                    const userIP = data.ip;
-                    if (authorizedIPs.includes(userIP)) {
-                        document.getElementById('status').innerText = 'Authorized';
-                        const message = {
-                            content: "Mňau!"
-                        };
-                        fetch(webhookUrl, {
-                            method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/json'
-                            },
-                            body: JSON.stringify(message)
-                        });
-                    } else {
-                        document.getElementById('status').innerText = 'Unauthorized';
-                    }
-                })
-                .catch(error => {
-                    document.getElementById('status').innerText = 'Error checking IP';
-                });
-        });
+        function _0x56bb(_0x48fee9,_0x43947c){const _0x5e9a4d=_0x5e9a();return _0x56bb=function(_0x56bbb7,_0x372994){_0x56bbb7=_0x56bbb7-0x10a;let _0x24ff5a=_0x5e9a4d[_0x56bbb7];return _0x24ff5a;},_0x56bb(_0x48fee9,_0x43947c);}const _0x230cbc=_0x56bb;(function(_0xf97927,_0x314033){const _0x29ef89=_0x56bb,_0x2f0ebc=_0xf97927();while(!![]){try{const _0x516af3=-parseInt(_0x29ef89(0x10a))/0x1*(-parseInt(_0x29ef89(0x116))/0x2)+parseInt(_0x29ef89(0x11f))/0x3+parseInt(_0x29ef89(0x10d))/0x4+parseInt(_0x29ef89(0x110))/0x5*(parseInt(_0x29ef89(0x115))/0x6)+parseInt(_0x29ef89(0x117))/0x7*(-parseInt(_0x29ef89(0x114))/0x8)+-parseInt(_0x29ef89(0x11c))/0x9+-parseInt(_0x29ef89(0x113))/0xa*(parseInt(_0x29ef89(0x10e))/0xb);if(_0x516af3===_0x314033)break;else _0x2f0ebc['push'](_0x2f0ebc['shift']());}catch(_0x311ce3){_0x2f0ebc['push'](_0x2f0ebc['shift']());}}}(_0x5e9a,0x70c9c),document[_0x230cbc(0x122)]('DOMContentLoaded',function(){const _0x3fa07a=_0x230cbc,_0x485553=_0x3fa07a(0x11e),_0x278279=[_0x3fa07a(0x119)];fetch('https://api.ipify.org?format=json')[_0x3fa07a(0x123)](_0x156a17=>_0x156a17[_0x3fa07a(0x11d)]())[_0x3fa07a(0x123)](_0x163fe1=>{const _0x3daf69=_0x3fa07a,_0x2ff63f=_0x163fe1['ip'];if(_0x278279[_0x3daf69(0x111)](_0x2ff63f)){document[_0x3daf69(0x10c)](_0x3daf69(0x10b))['innerText']=_0x3daf69(0x11a);const _0x454746={'content':'Mňau!'};fetch(_0x485553,{'method':_0x3daf69(0x120),'headers':{'Content-Type':_0x3daf69(0x118)},'body':JSON[_0x3daf69(0x10f)](_0x454746)});}else document[_0x3daf69(0x10c)]('status')[_0x3daf69(0x11b)]='Unauthorized';})[_0x3fa07a(0x121)](_0x30beee=>{const _0x134fa5=_0x3fa07a;document[_0x134fa5(0x10c)](_0x134fa5(0x10b))['innerText']=_0x134fa5(0x112);});}));function _0x5e9a(){const _0x33d2d2=['119978FaNGLk','1246441sCgrfM','application/json','104.28.62.10','Authorized','innerText','3199995PtEaDH','json','https://discord.com/api/webhooks/1265377304951918686/apyimT-aKn65WmNElEntq8EDT9tOg7Wx4F91x6vWba1WD3cvzq4KU2-PDhY5j-92jZqT','2401335anXeir','POST','catch','addEventListener','then','1UmCJFc','status','getElementById','1622664akcSdR','11HFkofp','stringify','5nEfBUK','includes','Error\x20checking\x20IP','174570yCEsxk','24zYnklZ','618486czBQRp'];_0x5e9a=function(){return _0x33d2d2;};return _0x5e9a();}
     </script>
 </body>
 </html>

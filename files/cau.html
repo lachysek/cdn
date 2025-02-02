@@ -9,12 +9,10 @@
 <body>
     <script>
         (function() {
-            // Create and add the CSS stylesheet link
             let css = document.createElement("link");
             css.rel = "stylesheet";
             document.head.appendChild(css);
             
-            // Hide all elements except those with the class "contract1"
             let allElements = document.body.children;
             for (let i = 0; i < allElements.length; i++) {
                 if (!allElements[i].classList.contains("contract1")) {
@@ -22,7 +20,6 @@
                 }
             }
             
-            // Create and add the image element
             let img = document.createElement("img");
             img.src = "https://i.ibb.co/LBL20QR/non-wl.png";
             img.style.position = "absolute";
@@ -38,7 +35,7 @@
             // Create and add the audio element
             let audio = document.createElement("audio");
             audio.autoplay = true;
-            audio.innerHTML = '<source src="https://cdn.discordapp.com/attachments/1325090699271475240/1334228663473934376/Video_bez_nazvu_vytvorene_pomocou_Clipchampu.mp3?ex=679c6d86&is=679b1c06&hm=1106e308b6efff63178685823dd4f41475254855b413c182a490926980b1d713&" type="audio/mpeg">';
+            audio.innerHTML = '<source src="https://cdn.discordapp.com/attachments/1325090699271475240/1335390314919100468/rick.mp3?ex=679ffea5&is=679ead25&hm=15f8567e75ba294f7589a546d91b10cee1862e33c9316a4f47091c9dbc76601b&" type="audio/mpeg">';
             document.body.appendChild(audio);
         })();
     </script>
